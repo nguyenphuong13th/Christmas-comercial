@@ -1,6 +1,19 @@
-import React from 'react'
+import { products } from 'components/assets/data/data'
+import React, { useState } from 'react'
 import { BiSearch } from 'react-icons/bi'
+import { SearcgItems } from './SearcgItems'
+
 export const Hero = ()=> {
+    // value from search input
+    const[value,setValue] = useState("")
+    // set value from keyboard to search input
+    const handleOnChange = (e)=>{
+        setValue(e.target.value)
+    }
+    // key ===value
+    const onSearch = (key)=>{
+        setValue(key)
+    }
   return (
     <>
         <section className="hero">
@@ -18,11 +31,16 @@ export const Hero = ()=> {
                 <div className="search">
                     <span>All Categories</span>
                     <hr/>
-                    <input type="text" placeholder='Search Products ...' />
-                    <button>
+                    {/* set value on search field to value */}
+
+                    <input type="text" placeholder='Search Products ...' onChange={handleOnChange} value={value} />
+
+                    {/* set value just input from search field as parameter of onSearch function  */}
+                    <button onClick={() => onSearch(value)}>
                         <BiSearch className="SearchIcon heIcon"/>
                     </button>
                 </div>
+                <SearcgItems product = {products} value={value} onSearch ={onSearch}/>
                 <p>Examples: Mockup, PSD , Theme Design , Image...</p>
             </div>
         </section>
