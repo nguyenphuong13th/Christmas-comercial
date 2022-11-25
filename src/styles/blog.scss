@@ -3,6 +3,7 @@
       @include grid(repeat(3, 1fr), 30px);
       .content {
         position: relative;
+
         button {
           @include width(100px, 40px, linear-gradient(90deg, #ff4267 40%, #ff4b2e 100%), $white, 40px, none);
           margin-bottom: $large;
