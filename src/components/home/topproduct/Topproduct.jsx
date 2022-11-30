@@ -8,11 +8,9 @@ export const Topproduct = () => {
     const [data,setData] = useState(topProducts)
     // use set to stored unique data on category and concat them with "all" to make an array of string about all category title
     const allCatagories =['all',...new Set(data.map((item) => item.category))]
-    console.log('allCatagories: '+allCatagories)
     const [category,setCategory] = useState(allCatagories)
     const handleFilter = (categoryList) =>{
-        console.log("categoryList: "+categoryList)
-        // filter if
+        // filter if catagoryList có trong item category return that item
         const newItem = topProducts.filter((item) => categoryList.includes(item.category))
         setData(newItem);
 

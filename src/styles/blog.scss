@@ -15,12 +15,14 @@
         }
 
         .text {
+          margin-top: -10px;
           @include zindex(relative, 5);
           span {
             color: $primary;
             font-weight: bold;
           }
         }
+        // create a black frame
         &::after {
           @include positions(absolute, 0, none, 0, none, 100%, 98%);
           background: rgba(#000000, 0.4);

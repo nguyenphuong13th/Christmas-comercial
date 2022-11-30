@@ -5,6 +5,8 @@ import Product from '../home/products/Product'
 import { Banner } from './banner/Banner'
 import { Topproduct } from './topproduct/Topproduct'
 import { Price } from './price/Price'
+import { Testtimorial } from './testimorial/Testtimorial'
+import { Blog } from './blog/Blog'
 
 export const Home = () => {
   return (
@@ -15,6 +17,8 @@ export const Home = () => {
       <Banner/>
       <Topproduct/>
       <Price/>
+      <Testtimorial/>
+      <Blog/>
     </>
   )
 }
