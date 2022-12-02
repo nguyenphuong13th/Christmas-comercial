@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import { AiOutlineClose, AiOutlineHeart } from 'react-icons/ai'
 import { FiSearch, FiShoppingBag } from 'react-icons/fi'
+import { useDispatch } from 'react-redux'
+import { addCart } from 'controller/cartListReducerSlice'
 
 export default function ProductItems({data}) {
+
+  const dispatch = useDispatch();
 
   const[openImage,setOpenImage] =useState(false)
   const[img,setImg] = useState("")
@@ -18,7 +22,7 @@ export default function ProductItems({data}) {
             <img src={require("components/assets"+productItems.cover)} alt="" />
             <div className="overlay">
               <button className="button">
-                <FiShoppingBag/>
+                <FiShoppingBag onClick= {()=> dispatch(addCart(productItems))}/>
               </button>
               <button className="button">
                 <AiOutlineHeart/>

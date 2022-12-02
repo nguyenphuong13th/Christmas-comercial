@@ -3,9 +3,11 @@ import logo from '../assets/images/logo.png'
 import { BsBagCheck } from 'react-icons/bs';
 import { BiSearch } from 'react-icons/bi';
 import { RiUser3Line } from 'react-icons/ri';
-import { AiOutlineHeart,AiOutlineMenu,AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineMenu,AiOutlineClose } from 'react-icons/ai';
 import { navlist } from '../assets/data/data';
 import { Link } from 'react-router-dom';
+import { connect,useDispatch,useSelector } from 'react-redux';
+import { cartlistSelector } from 'controller/cartListSelector';
 
 export const Header = () => {
 
@@ -14,6 +16,10 @@ export const Header = () => {
         header.classList.toggle("active",this.window.scrollY > 100) //if croll down >100 add class active cho header
     })
     const [mobile,setMobile] = useState(false) //toggle menu responsive in mobile mode
+
+    //cart add in shop
+    const getdata = useSelector(cartlistSelector)
+    console.log(getdata)
   return (
     <>
       <header className="header">
@@ -55,7 +61,9 @@ export const Header = () => {
 
             <div className="right_user">
               <RiUser3Line className="userIcon heIcon" />
-              <AiOutlineHeart className="userIcon heIcon" />
+              <span>
+                <a href="/">Register/Login</a>
+              </span>
             </div>
             <div className="right_card">
               <button className="button">
@@ -69,3 +77,9 @@ export const Header = () => {
     </>
   );
 }
+const mapStateToProps = (state)=>{
+  return{
+    amount : state.amount
+  }
+}
+connect(mapStateToProps)(Header)

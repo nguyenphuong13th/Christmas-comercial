@@ -2,6 +2,10 @@ import React from 'react'
 
 export const Footer = () => {
   return (
-    <div>Footer</div>
+    <>
+      <footer>
+        <p>Copyright @ Anthony all rights to reserved. Power by NHP</p>
+      </footer>
+    </>
   )
 }

@@ -1,2 +1,4 @@
 - Github
 - Netlify
+- react-redux
+- redux

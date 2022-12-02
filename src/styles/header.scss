@@ -50,6 +50,12 @@ header {
         .heIcon {
           @include pa_ma(none, 0 $md);
         }
+        span{
+          margin-right: 10px;
+          a{
+            font-size: small;
+          }
+        }
       }
       .showCart {
         background: $white;
