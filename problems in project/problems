@@ -20,4 +20,5 @@ See https://reactjs.org/link/invalid-hook-call for tips about how to debug and f
 - content.js:1 Uncaught DOMException: Failed to execute 'getRangeAt' on 'Selection': 0 is not a valid index.
     at Content.isSelection (chrome-extension://ibppednjgooiepmkgdcoppnmbhmieefh/js/content.js:1:20792)
     at Content.handleSelection (chrome-extension://ibppednjgooiepmkgdcoppnmbhmieefh/js/content.js:1:20478)
--
+-   call selector trực tiếp từ reducer trong store useSelector(state=>state.carList(in store))
+- nếu thay đổi selector hay redux thì phải restart server để áp dụng

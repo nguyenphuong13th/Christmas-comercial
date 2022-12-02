@@ -7,7 +7,7 @@ import { AiOutlineMenu,AiOutlineClose } from 'react-icons/ai';
 import { navlist } from '../assets/data/data';
 import { Link } from 'react-router-dom';
 import { connect,useDispatch,useSelector } from 'react-redux';
-import { cartlistSelector } from 'controller/cartListSelector';
+import { cartlistSelector } from '../../controller/cartListSelector';
 
 export const Header = () => {
 
@@ -20,6 +20,7 @@ export const Header = () => {
     //cart add in shop
     const getdata = useSelector(cartlistSelector)
     console.log(getdata)
+    console.log("cartlistSelector"+ cartlistSelector)
   return (
     <>
       <header className="header">
@@ -68,7 +69,7 @@ export const Header = () => {
             <div className="right_card">
               <button className="button">
                 <BsBagCheck className="shop heIcon" />
-                MY CART (0)
+                MY CART ({getdata.cart? getdata.cart.length:0})
               </button>
             </div>
           </div>

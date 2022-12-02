@@ -1,1 +1,1 @@
-export const cartlistSelector = (state) => state.addCartList
+export const cartlistSelector = (state) => state.cartList
