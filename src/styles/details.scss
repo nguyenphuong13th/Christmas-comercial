@@ -36,6 +36,12 @@ article {
               @include width(120px, none, none, none, 5px, none);
               span {
                 font-weight: 600;
+                input{
+                  width:50px;
+                  font-weight: 600;
+                  font-size: 18px;
+                  text-align: center;
+                }
               }
               button {
                 font-size: 18px;

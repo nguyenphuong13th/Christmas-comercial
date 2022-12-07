@@ -27,9 +27,29 @@ const cartlistReducerSlice = createSlice({
             // if dispatched ID match with ID of item in cart then we do not show that item
             state.cart = state.cart.filter((element)=> element.id !== itemID)
 
+        },
+        // removeItem :(state,action) =>{
+        //     const itemIndex_desc = state.cart.findIndex((itemIndex)=> itemIndex.id === action.payload.id)
+        //     if(state.cart[itemIndex_desc].qty >= 1){
+        //         state.cart[itemIndex_desc].qty -= 1
+        //     }else if (state.cart[itemIndex_desc].qty === 1){
+        //         const itemDetailID = action.payload
+        //         const data = state.cart.filter((el)=>el.id !== itemDetailID)
+        //         return state.cart = data
+        //     }
+        // }
+        removeItem: (state,action)=>{
+            const itemIndex_desc = state.cart.findIndex((itemIndex)=> itemIndex.id === action.payload.id)
+            if(state.cart[itemIndex_desc].qty >= 1){
+                state.cart[itemIndex_desc].qty -= 1
+            }else if (state.cart[itemIndex_desc].qty <= 1){
+                    const itemDetailID = action.payload
+                     state.cart = state.cart.filter((el)=>el.id !== itemDetailID)
+
+                }
         }
 
     }
 })
-export const {addCart,removeCart} = cartlistReducerSlice.actions
+export const {addCart,removeCart,removeItem} = cartlistReducerSlice.actions
 export default cartlistReducerSlice.reducer;
