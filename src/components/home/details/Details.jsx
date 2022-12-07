@@ -16,7 +16,6 @@ export const Details = () => {
     const {id} = useParams()
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    // const [itemQty,setItemQty] = useState(1)
 
 
     const compare = ()=>{
@@ -25,13 +24,13 @@ export const Details = () => {
         })
         setData(compareData)
     }
+    // use compare function as dependencies to update qty of product in detail follow the change of qty product in cart
     useEffect(()=>{
         compare()
-    },[id])
+    },[compare])
 
     const increment = (item)=>{
         dispatch(addCart(item))
-        // setItemQty(itemQty + 1)
         console.log(data)
     }
     const decrement = (item)=>{
