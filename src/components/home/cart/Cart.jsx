@@ -65,7 +65,6 @@ export const Cart  = () => {
               <button onClick={() => incrementCart(cartdataCheckoutList)}>
                 <AiOutlinePlus />
               </button>
-
               <span>
                 <input type="text" value={cartdataCheckoutList.qty} />
               </span>
