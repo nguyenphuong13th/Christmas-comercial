@@ -5,4 +5,60 @@
     .cart_header{
         @include flex(center, space-between, center);
     }
+    .cart_details_content{
+        @include flex(center, center,column);
+        .cart_details_content_table{
+            margin-top: $md;
+            width :800px;
+            border-bottom: 2px solid black;
+            .cart_total{
+                text-align: right;
+            }
+            .detail_content_details_products{
+                .cart_details_content_img{
+                    margin-bottom: $md;
+                    @include flex(center, center,none);
+                    img {
+                        width: 80px;
+                        height:80px;
+                        margin-right: $md;
+                        border-radius: 10px;
+                    }
+                }
+                .detail_content_details_price{
+                    margin-bottom: $md;
+                    text-align: center;
+                }
+                .detail_content_details_qty{
+                    @include flex(center, center,none);
+                    text-align: center;
+                    margin-bottom: $md;
+                    span {
+                        font-weight: 600;
+                        input{
+                          width:50px;
+                          font-weight: 600;
+                          font-size: 18px;
+                          text-align: center;
+                        }
+                    }
+                }
+                .detail_content_details_total{
+                    text-align: right;
+                    margin-bottom: $md;
+                }
+            }
+
+        }
+        .ckeck_out_content_table{
+            width: 800px;
+            p{
+                text-align: right;
+            }
+
+        }
+        .button {
+            margin-top: $md;
+        }
+    }
 }
