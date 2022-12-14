@@ -115,6 +115,7 @@ header {
     background: rgba(255, 255, 255, 0.8);
 
     .showCart {
-      @include positions(absolute, 110%, none, none, 20px, 450px, auto);
+      @include positions(absolute, 110%, none, none, 20px, 450px, 500px);
+      overflow-y: scroll;
     }
   }

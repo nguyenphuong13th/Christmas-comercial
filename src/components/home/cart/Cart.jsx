@@ -28,13 +28,13 @@ export const Cart  = () => {
   const taxPrice = totalPrice ? (totalPrice * 10) / 100 : 0
   const finalPay = totalPrice + taxPrice + shippingPrice - deductVoucher
 
-  // const increment = (cartdataCheckoutList)=>{
-  //   dispatch(addCart(cartdataCheckoutList))
-  // }
-  // const decrement = (cartdataCheckoutList)=>{
-  //   dispatch(removeItem(cartdataCheckoutList))
+  const incrementCart = (cartdataCheckoutList)=>{
+    dispatch(addCart(cartdataCheckoutList))
+  }
+  const decrementCart = (cartdataCheckoutList)=>{
+    dispatch(removeItem(cartdataCheckoutList))
 
-  // }
+  }
   // const CartData = ()=>{
   //   let compareData = getdata.cart
   //   setDataCheckout(compareData)
@@ -62,17 +62,16 @@ export const Cart  = () => {
           </td>
           <td>
             <div className="detail_content_details_qty">
-              <button>
+              <button onClick={() => incrementCart(cartdataCheckoutList)}>
                 <AiOutlinePlus />
               </button>
-              {/* onClick={() => increment(cartdataCheckoutList)} */}
+
               <span>
                 <input type="text" value={cartdataCheckoutList.qty} />
               </span>
-              <button>
+              <button onClick={() => decrementCart(cartdataCheckoutList)} >
                 <AiOutlineMinus />
               </button>
-              {/* onClick={() => decrement(cartdataCheckoutList)} */}
             </div>
           </td>
           <td>
