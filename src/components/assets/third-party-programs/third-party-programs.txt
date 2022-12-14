@@ -1,4 +1,5 @@
 - Github
 - Netlify
 - react-redux
-- redux
+- reduxtool kit to manage state
+- redux persist to maintain state when reload page

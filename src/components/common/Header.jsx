@@ -48,7 +48,7 @@ export const Header = () => {
     const showCartList = getdata.cart.map((showCartList)=>(
       <div className="details_content">
         <div className="details_content_img">
-          <Link to={`/cart/${showCartList.id}`} onClick={handleClose}>
+          <Link to={`/product-detail/${showCartList.id}`} onClick={handleClose}>
             <img src={require("components/assets"+showCartList.cover)} alt="" />
           </Link>
         </div>
@@ -113,6 +113,9 @@ export const Header = () => {
                 <a href="/">Register/Login</a>
               </span>
             </div>
+
+            {/* // cart component */}
+
             <div className="right_card">
               <button className="button" onClick={()=>setCartList(!cartList)}>
                 <BsBagCheck className="shop heIcon" />
@@ -128,6 +131,7 @@ export const Header = () => {
                       {showCartList}
                       <div className="details_total">
                         <h4>Total : ${totalPrice}</h4>
+                        <a className="button" href="/cart-checkout">Check out</a>
                       </div>
                     </section>
                   ):(

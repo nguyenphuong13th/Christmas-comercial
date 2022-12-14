@@ -99,6 +99,7 @@ header {
           }
         }
         &_total {
+          @include flex(center, space-between, center);
           padding-top: 7px;
         }
       }

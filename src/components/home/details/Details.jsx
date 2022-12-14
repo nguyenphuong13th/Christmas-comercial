@@ -24,7 +24,7 @@ export const Details = () => {
         })
         setData(compareData)
     }
-    // use compare function as dependencies to update qty of product in detail follow the change of qty product in cart
+    //use compare function as dependencies to update qty of product in detail follow the change of qty product in cart
     useEffect(()=>{
         compare()
     },[compare])
