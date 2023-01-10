@@ -10,6 +10,11 @@ export default function ShopProductItems({data}) {
 
   const[openImage,setOpenImage] =useState(false)
   const[img,setImg] = useState("")
+  const [allItem,setAllItem] = useState(false)
+  const handleonCLickSeeAll = ()=>{
+    setAllItem(!allItem)
+  }
+
 
   const onOpenImage = (src)=>{
     setImg(src)
@@ -41,9 +46,8 @@ export default function ShopProductItems({data}) {
   ))
   return (
     <>
-      <div className='product_items'>
+      <div className={allItem ?"product_items":"product_items product_items_shop_short" }>
         {productItems}
-
         {/* zoom image of each product */}
         <div className={openImage? "modelOpen" : "modelClose"}>
           <div className="onClickImage">
@@ -54,6 +58,7 @@ export default function ShopProductItems({data}) {
           </div>
         </div>
       </div>
+      <button className="button" onClick={handleonCLickSeeAll}>{allItem ? 'Shorter' : "See All"}</button>
     </>
   )
 }

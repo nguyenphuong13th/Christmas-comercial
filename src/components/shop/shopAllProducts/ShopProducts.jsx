@@ -5,10 +5,11 @@ import ShopProductItems from './ShopProductItems'
 
 export default function ShopProducts() {
   const [data,setData] = useState(products)
+
   return (
     <div>
 
-      <section className="product">
+      <section className="product_shop">
         <div className="container">
           <Heading title={"All Our Products"} desc={'Check the tastest Cake of the week .These rising stars are worth your attention'}/>
         </div>

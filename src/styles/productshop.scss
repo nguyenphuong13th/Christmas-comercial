@@ -1,0 +1,6 @@
+.product_shop{
+    .see-all_button{
+        @include flex(center,center,center);
+        margin-top: $md;
+    }
+}
