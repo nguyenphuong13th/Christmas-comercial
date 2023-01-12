@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import { AiOutlineClose, AiOutlineHeart } from 'react-icons/ai'
 import { FiSearch, FiShoppingBag } from 'react-icons/fi'
-import { useDispatch } from 'react-redux'
+import { useDispatch,useSelector } from 'react-redux'
 import { addCart } from 'controller/cartListReducerSlice'
+import { productShoplistSelector } from '../../../controller/productShopListSelector';
 
-export default function ShopProductItems({data}) {
+export default function ShopProductItems() {
 
   const dispatch = useDispatch();
-
+  const getdata = useSelector(productShoplistSelector)
   const[openImage,setOpenImage] =useState(false)
   const[img,setImg] = useState("")
   const [allItem,setAllItem] = useState(false)
@@ -21,7 +22,7 @@ export default function ShopProductItems({data}) {
     setOpenImage(true)
   }
   //Render image
-  const productItems = data.map((productItems)=>(
+  const productItems = getdata.productShop.map((productItems)=>(
         <div className="box" key={productItems.id}>
           <div className="img">
             <img src={require("components/assets"+productItems.cover)} alt="" />

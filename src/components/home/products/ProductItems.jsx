@@ -10,7 +10,6 @@ export default function ProductItems({data}) {
 
   const[openImage,setOpenImage] =useState(false)
   const[img,setImg] = useState("")
-
   const onOpenImage = (src)=>{
     setImg(src)
     setOpenImage(true)

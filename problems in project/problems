@@ -25,3 +25,11 @@ See https://reactjs.org/link/invalid-hook-call for tips about how to debug and f
 - useEffect sử dụng để reload lại page khi có state thay đổi để hiển thị sự thay đổi nếu không dùng thì sẽ không thể thấy dc sự thay đổi VD: header  useEffect(()=>{
       totalPriceCart()
     },[totalPriceCart])
+- sau khi lấy dat từ store ra thì thường data sẽ là object nên sẽ hiển thị lỗi non-A non-serializable value
+cần làm một bước là truy suất vào object trong innitialstate của reducer để có object
+const initialState = {
+    productShop:products
+}
+const getdata = useSelector(productShoplistSelector)
+const productItems = getdata.productShop.map((productItems) lỗi
+const productItems = getdata.productShop.map((productItems) (ko lỗi)

@@ -1,0 +1,1 @@
+export const productShoplistSelector = (state) => state.ProductShopList
