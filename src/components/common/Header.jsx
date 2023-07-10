@@ -91,7 +91,7 @@ export const Header = () => {
               <ul className={mobile? "mobile-nav":"menu"}>
                 {navlist.map((nav) => (
                   <li key={nav.id}>
-                    <Link to={nav.path}>{nav.text}</Link>
+                    <Link to={`Christmas-comercial${nav.path}`}>{nav.text}</Link>
                   </li>
                 ))}
               </ul>

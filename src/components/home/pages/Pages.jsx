@@ -16,7 +16,7 @@ export const Pages = () => {
         <Route path='/Christmas-comercial/' element={<Home/>}/>
         <Route path='/Christmas-comercial/shop' element={<Shop/>}/>
         <Route path='/Christmas-comercial/product-detail/:id' element={<Details/>}/>
-        <Route path='/Christmas-comercial/cart-checkout/' element={<Cart/>}/>
+        <Route path='Christmas-comercial/cart-checkout/' element={<Cart/>}/>
       </Routes>
       <Footer/>
     </Router>
