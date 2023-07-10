@@ -2,7 +2,7 @@
   "name": "react-commerc-web",
   "version": "0.1.0",
   "private": true,
-   "homepage":"https://nguyenphuong13th.github.io",
+   "homepage":"https://nguyenphuong13th.github.io/Christmas-comercial/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
     "@testing-library/jest-dom": "^5.16.5",
