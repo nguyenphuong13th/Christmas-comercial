@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Christmas-comercial/static/css/main.60c596a5.css",
-    "main.js": "/Christmas-comercial/static/js/main.455f12d8.js",
+    "main.css": "/Christmas-comercial/static/css/main.f23e97ac.css",
+    "main.js": "/Christmas-comercial/static/js/main.813be0a9.js",
     "static/js/787.749835b3.chunk.js": "/Christmas-comercial/static/js/787.749835b3.chunk.js",
     "static/media/w1.png": "/Christmas-comercial/static/media/w1.ea1425c188eeb1b9edc9.png",
     "static/media/d5.png": "/Christmas-comercial/static/media/d5.8902b73d2324775b34de.png",
@@ -74,12 +74,12 @@
     "index.html": "/Christmas-comercial/index.html",
     "static/media/third-party-programs.txt": "/Christmas-comercial/static/media/third-party-programs.489d0fb1b49c92ac65db.txt",
     "static/media/init setup": "/Christmas-comercial/static/media/init setup.7ba7cbaa85e40c3c31ca",
-    "main.60c596a5.css.map": "/Christmas-comercial/static/css/main.60c596a5.css.map",
-    "main.455f12d8.js.map": "/Christmas-comercial/static/js/main.455f12d8.js.map",
+    "main.f23e97ac.css.map": "/Christmas-comercial/static/css/main.f23e97ac.css.map",
+    "main.813be0a9.js.map": "/Christmas-comercial/static/js/main.813be0a9.js.map",
     "787.749835b3.chunk.js.map": "/Christmas-comercial/static/js/787.749835b3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.60c596a5.css",
-    "static/js/main.455f12d8.js"
+    "static/css/main.f23e97ac.css",
+    "static/js/main.813be0a9.js"
   ]
 }
