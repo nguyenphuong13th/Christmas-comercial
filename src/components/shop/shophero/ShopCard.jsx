@@ -1,67 +1,70 @@
 import React from 'react'
 import { shopHero } from '../../assets/data/data'
-import { useFormik } from 'formik';
-import { useState,useSelector } from 'react';
-import { useDispatch } from 'react-redux';
-import { addProduct } from 'controller/productReducerSlice';
-import { productShoplistSelector } from '../../../controller/productShopListSelector';
+// import { useFormik } from 'formik';
+// import { useState,useSelector } from 'react';
+// import { useDispatch } from 'react-redux';
+// import { addProduct } from 'controller/productReducerSlice';
+// import { productShoplistSelector } from '../../../controller/productShopListSelector';
 export const ShopCard = ()=> {
-    const [show,SetShow] = useState(false)
+    //show form
+    // const [show,SetShow] = useState(false)
+    //---------------------------------------------------------------------------------------------------
     //data from store
-    const getdata = useSelector(productShoplistSelector)
+    // const getdata = useSelector(productShoplistSelector)
     //take array from object
-    const idNumber = getdata.productShop
-    console.log('idNumber: ' + idNumber)
+    // const idNumber = getdata.productShop
+    // console.log('idNumber: ' + idNumber)
     //dispatch
-    const dispatch = useDispatch();
-    //handle action variable
-    const handleAction = (itemName) =>{
-        switch(itemName){
-            case "Add New Product":
-                return handleShowAddForm;
-            case "Modify Product":
-                return handleShowMOdifyForm
-            case "Delete Product":
-                return handleShowDeleteForm
+    // const dispatch = useDispatch();
+    // handle action variable
+    // const handleAction = (itemName) =>{
+    //     switch(itemName){
+    //         case "Add New Product":
+    //             return handleShowAddForm;
+    //         case "Modify Product":
+    //             return handleShowMOdifyForm
+    //         case "Delete Product":
+    //             return handleShowDeleteForm
 
-        }
-    }
-    //show add product form
-    const handleShowAddForm = ()=>{
-        SetShow(!show)
-    }
-    const handleShowMOdifyForm = ()=>{
-        console.log('modifyform')
-    }
-    //
-    const handleShowDeleteForm = ()=>{
-        console.log('delete')
-    }
-    //close button add form
-    const handleCloseAddform = ()=>{
-        SetShow(false)
-    }
-    const formik = useFormik({
-        initialValues: {
-            id: idNumber.length + 1,
-            cover:'',
-            title:'',
-            author:'',
-            ingredient:'',
-            price:'',
-            category:'',
-            qty:'',
-            mfd:'',
-            exp:''
-        },
-        onSubmit: values => {
-        //   alert(JSON.stringify(values, null, 2));
-        dispatch(addProduct(values))
-        formik.values.ingredient = ""
-        },
-      });
+    //     }
+    // }
+    // //show add product form
+    // const handleShowAddForm = ()=>{
+    //     SetShow(!show)
+    // }
+    // const handleShowMOdifyForm = ()=>{
+    //     console.log('modifyform')
+    // }
+    // //
+    // const handleShowDeleteForm = ()=>{
+    //     console.log('delete')
+    // }
+    // //close button add form
+    // const handleCloseAddform = ()=>{
+    //     SetShow(false)
+    // }
+    // // const formik = useFormik({
+    // //     initialValues: {
+    // //         id: idNumber.length + 1,
+    // //         cover:'',
+    // //         title:'',
+    // //         author:'',
+    // //         ingredient:'',
+    // //         price:'',
+    // //         category:'',
+    // //         qty:'',
+    // //         mfd:'',
+    // //         exp:''
+    // //     },
+    // //     onSubmit: values => {
+    // //     //   alert(JSON.stringify(values, null, 2));
+    // //     dispatch(addProduct(values))
+    // //     formik.values.ingredient = ""
+    // //     },
+    // //   });
     const heroList = shopHero.map((items)=>(
-        <div onClick={handleAction(items.name)}>
+        // <div onClick={handleAction(items.name)}>
+        <div>
             <div className="card" key={items.id}>
                 <div className="left">
                     <img src={require("components/assets"+items.cover)} alt="" />
@@ -79,7 +82,7 @@ export const ShopCard = ()=> {
       <section className="cards">{heroList}</section>
 
       {/* add product form */}
-      <section className={show? "show" : "hide"}>
+      {/* <section className={show? "show" : "hide"}>
         <section className="addproduct" >
             <div className="addproduct_top">
                 <h3>Product Information</h3>
@@ -191,7 +194,7 @@ export const ShopCard = ()=> {
                 </div>
             </form>
         </section>
-      </section>
+      </section> */}
 
     </>
   );
