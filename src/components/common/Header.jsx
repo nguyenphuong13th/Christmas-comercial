@@ -48,7 +48,7 @@ export const Header = () => {
     const showCartList = getdata.cart.map((showCartList)=>(
       <div className="details_content">
         <div className="details_content_img">
-          <Link to={`/product-detail/${showCartList.id}`} onClick={handleClose}>
+          <Link to={`/Christmas-comercial/product-detail/${showCartList.id}`} onClick={handleClose}>
             <img src={require("components/assets"+showCartList.cover)} alt="" />
           </Link>
         </div>
@@ -131,7 +131,7 @@ export const Header = () => {
                       {showCartList}
                       <div className="details_total">
                         <h4>Total : ${totalPrice}</h4>
-                        <a className="button" href="/cart-checkout">Check out</a>
+                        <a className="button" href="/Christmas-comercial/cart-checkout">Check out</a>
                       </div>
                     </section>
                   ):(

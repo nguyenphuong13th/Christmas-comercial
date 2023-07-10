@@ -138,7 +138,7 @@ export const Cart  = () => {
                 <td><p>${finalPay}</p></td>
               </tr>
             </table>
-            <a className="button" href="/">Check out</a>
+            <a className="button" href="/Christmas-comercial">Check out</a>
         </div>
 
       </div>
